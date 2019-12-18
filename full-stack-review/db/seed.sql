@@ -26,3 +26,16 @@ CREATE TABLE order_items (
     price decimal
 );
 
+
+
+-- INSERT INTO products_reviewday (
+--     product_name,
+--     product_image,
+--     price,
+--     product_description
+-- ) VALUES (
+-- 'Chiitan',
+-- 'https://66.media.tumblr.com/039f17d4d86bb79de1a0c6500e0de1d1/tumblr_pli1vt5obs1r17wg1_1280.jpg',
+-- 199.99,
+-- 'Just your average non-violent mascot, Chiitan!'
+-- );
