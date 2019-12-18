@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
-
+import {connect} from 'react-redux';
+import AuthModal from './AuthModal';
 
 class Cart extends Component {
     constructor(){
@@ -11,9 +12,17 @@ class Cart extends Component {
 
     render(){
         return(
-            <div>Cart Component</div>
+            <div>
+                {this.props.user.email
+                ? (<div>Cart</div>)
+                : (<AuthModal />)}
+            </div>
         )
     }
 }
 
-export default Cart;
+const mapStateToProps = reduxState => {
+    return reduxState
+}
+
+export default connect(mapStateToProps)(Cart);

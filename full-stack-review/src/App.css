@@ -14,3 +14,10 @@
 .product-image {
   width: 250px;
 }
+
+.auth-modal {
+  width: 150px;
+  height: 100px;
+  background-color: aqua;
+  margin: 0 auto;
+}
