@@ -19,13 +19,16 @@ class Products extends Component {
     render(){
         const mappedProducts = this.state.products.map((product, i) => {
             return (
-                <div key={i}>
-                    
+                <div key={i} className='product-container'>
+                    <img src={product.product_image} alt={product.product_name} className='product-image'/>
+                    <p>{product.product_name}</p>
+                    <p>{product.product_description}</p>
+                    <p>${product.price}</p>
                 </div>
             )
         })
         return(
-            <div>Products Component</div>
+            <div className='product-flex'>{mappedProducts}</div>
         )
     }
 }
