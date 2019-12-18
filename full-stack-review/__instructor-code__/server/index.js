@@ -21,6 +21,11 @@ massive(CONNECTION_STRING).then(db => {
     console.log('db connected')
 })
 
+//auth endpoints
+app.post('/auth/login', authCtrl.login);
+app.post('/auth/register', authCtrl.register);
+app.post('/auth/logout', authCtrl.logout);
+
 app.get('/api/products', cartCtrl.getProducts);
 
 const port = SERVER_PORT || 4040;
