@@ -19,9 +19,15 @@ class Products extends Component {
         .catch(err => console.log(err))
     }
 
-    addToCart = () => {
+    addToCart = (id, price) => {
         if(this.props.user.email){
-            //axios statement
+            axios.post('/api/cart', {
+                customer_order_id: this.props.user.customer_order_id,
+                product_id: id,
+                price
+            }).then(res => {
+                alert('Item added to Cart')
+            }).catch(err => console.log(err))
         }else {
             this.handleToggle()
         }
@@ -39,7 +45,7 @@ class Products extends Component {
                     <p>{product.product_name} </p>
                     <p>{product.product_description}</p>
                     <p>${product.price}</p>
-                    <button onClick={this.addToCart}>Add to Cart</button>
+                    <button onClick={() => this.addToCart(product.product_id, product.price)}>Add to Cart</button>
                 </div>
             )
         })

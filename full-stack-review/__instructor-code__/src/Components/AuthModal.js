@@ -21,7 +21,7 @@ const AuthModal = (props) => {
         })
     }
 
-    console.log(props)
+    // console.log(props)
 
     return(
         <div className='auth-modal'>
